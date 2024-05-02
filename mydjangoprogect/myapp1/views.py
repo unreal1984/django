@@ -21,6 +21,6 @@ def index_page(request):
     for i in all_workers:
         print(f"Surname: {i.second_name}, Name: {i.name}, Salary: {i.salary}, ID: {i.id}")
                 
-    return render(request, 'index.html')
+    return render(request, 'index.html', context={'data':all_workers})
 #def about_page(request):
 #   return render(request, 'about.html')

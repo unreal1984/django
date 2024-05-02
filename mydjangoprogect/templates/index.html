@@ -6,5 +6,15 @@
 </head>
 <body>
     <h1>Hello, world!</h1>
+    {%for i in data%}
+    {{i.second_name}} {{i.name}} {{i.salary}}
+    
+    {% if i.salary > 30000 %}
+    <b style="color:green"> {{i.salary}} </b>
+    {% endif %}
+    
+    <br>
+    {%endfor%}
+
 </body>
 </html>
